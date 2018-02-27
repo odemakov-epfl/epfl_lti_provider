@@ -8,12 +8,39 @@
     {{ form.hidden_tag() }}
 
     <p>
-        {{ form.p1(readonly=true) }} +
-        {{ form.p2(readonly=true) }} =
-        {{ form.result(readonly=true) }}
+        {{ form.p11(readonly=true) }} +
+        {{ form.p12(readonly=true) }} =
+        {{ form.result1(readonly=true) }}
+        {{ form.correct1(readonly=true) }}
     </p>
-    Is correct? {{ form.correct(readonly=true) }}
-    <a href="{{ url_for('add_form') }}">New Problem</a>
+    <p>
+        {{ form.p21(readonly=true) }} +
+        {{ form.p22(readonly=true) }} =
+        {{ form.result2(readonly=true) }}
+        {{ form.correct2(readonly=true) }}
+    </p>
+    <p>
+        {{ form.p31(readonly=true) }} +
+        {{ form.p32(readonly=true) }} =
+        {{ form.result3(readonly=true) }}
+        {{ form.correct3(readonly=true) }}
+    </p>
+    <p>
+        {{ form.p41(readonly=true) }} +
+        {{ form.p42(readonly=true) }} =
+        {{ form.result4(readonly=true) }}
+        {{ form.correct4(readonly=true) }}
+    </p>
+    <p>
+        {{ form.p51(readonly=true) }} +
+        {{ form.p52(readonly=true) }} =
+        {{ form.result5(readonly=true) }}
+        {{ form.correct5(readonly=true) }}
+    </p>
+    <p>
+      Your grade now is {{ score }} from 10!
+    </p>
+    <a href="{{ url_for('add_form') }}">Start new</a>
 </form>
 
 </body>

@@ -18,10 +18,26 @@ class AddForm(Form):
     :param Form:
     """
 
-    p1 = IntegerField('p1')
-    p2 = IntegerField('p2')
-    result = IntegerField('result')
-    correct = BooleanField('correct')
+    p11 = IntegerField('p11')
+    p12 = IntegerField('p12')
+    p21 = IntegerField('p21')
+    p22 = IntegerField('p22')
+    p31 = IntegerField('p31')
+    p32 = IntegerField('p32')
+    p41 = IntegerField('p41')
+    p42 = IntegerField('p42')
+    p51 = IntegerField('p51')
+    p52 = IntegerField('p52')
+    result1 = IntegerField('result1')
+    result2 = IntegerField('result2')
+    result3 = IntegerField('result3')
+    result4 = IntegerField('result4')
+    result5 = IntegerField('result5')
+    correct1 = BooleanField('correct1')
+    correct2 = BooleanField('correct2')
+    correct3 = BooleanField('correct3')
+    correct4 = BooleanField('correct4')
+    correct5 = BooleanField('correct5')
 
 
 def error(exception=None):
@@ -78,8 +94,16 @@ def add_form(lti=lti):
     :return: index page for lti provider
     """
     form = AddForm()
-    form.p1.data = randint(1, 9)
-    form.p2.data = randint(1, 9)
+    form.p11.data = randint(1, 9)
+    form.p12.data = randint(1, 9)
+    form.p21.data = randint(1, 9)
+    form.p22.data = randint(1, 9)
+    form.p31.data = randint(1, 9)
+    form.p32.data = randint(1, 9)
+    form.p41.data = randint(1, 9)
+    form.p42.data = randint(1, 9)
+    form.p51.data = randint(1, 9)
+    form.p52.data = randint(1, 9)
     return render_template('add.html', form=form)
 
 
@@ -92,10 +116,24 @@ def grade(lti=lti):
     :return: grade rendered by grade.html template
     """
     form = AddForm()
-    correct = ((form.p1.data + form.p2.data) == form.result.data)
-    form.correct.data = correct
-    lti.post_grade(1 if correct else 0)
-    return render_template('grade.html', form=form)
+    correct1 = ((form.p11.data + form.p12.data) == form.result1.data)
+    correct2 = ((form.p21.data + form.p22.data) == form.result2.data)
+    correct3 = ((form.p31.data + form.p32.data) == form.result3.data)
+    correct4 = ((form.p41.data + form.p42.data) == form.result4.data)
+    correct5 = ((form.p51.data + form.p52.data) == form.result5.data)
+    form.correct1.data = correct1
+    form.correct2.data = correct2
+    form.correct3.data = correct3
+    form.correct4.data = correct4
+    form.correct5.data = correct5
+    score = 0
+    score += 2 if correct1 else 0
+    score += 2 if correct2 else 0
+    score += 2 if correct3 else 0
+    score += 2 if correct4 else 0
+    score += 2 if correct5 else 0
+    lti.post_grade(score/10.)
+    return render_template('grade.html', form=form, score=score)
 
 
 def set_debugging():
