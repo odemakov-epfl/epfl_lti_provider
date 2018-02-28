@@ -54,10 +54,12 @@ working directory.  Execute these commands:
 
 .. code-block:: bash
 
-   git clone git@github.com:mitodl/mit_lti_flask_sample.git
-   cd mit_lti_flask_sample
+   git clone git@github.com:odemakov-epfl/epfl_lti_provider.git
+   cd epfl_lti_provider
    pip install -r requirements.txt
-   python mit-lti-flask-sample.py
+   export FLASK_APP=mit_lti_flask_sample.py
+   export FLASK_DEBUG=1
+   flask run [--host=127.0.0.1]
 
 Then navigate to `http://localhost:5000/is_up <http://localhost:5000/is_up>`_
 
