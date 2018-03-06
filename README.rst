@@ -54,7 +54,7 @@ working directory.  Execute these commands:
 
 .. code-block:: bash
 
-   git clone git@github.com:odemakov-epfl/epfl_lti_provider.git
+   git clone https://github.com/odemakov-epfl/epfl_lti_provider.git
    cd epfl_lti_provider
    pip install -r requirements.txt
    export FLASK_APP=mit_lti_flask_sample.py

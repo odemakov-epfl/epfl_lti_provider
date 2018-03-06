@@ -1,7 +1,7 @@
 import os
 from flask import Flask
 from flask import render_template
-from flask.ext.wtf import Form
+from flask_wtf import FlaskForm
 from wtforms import IntegerField, BooleanField
 from random import randint
 
@@ -12,10 +12,10 @@ app = Flask(__name__)
 app.config.from_object('config')
 
 
-class AddForm(Form):
-    """ Add data from Form
+class AddForm(FlaskForm):
+    """ Add data from FlaskForm
 
-    :param Form:
+    :param FlaskForm:
     """
 
     p11 = IntegerField('p11')
