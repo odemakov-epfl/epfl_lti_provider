@@ -91,6 +91,14 @@ Keys                    Values
 LTI ID                  ``lti_starx_add_demo``
 ----------------------- ------------------------
 LTI URL                 ``THE_URL_OF_YOUR_DEPLOYED_LTI_PROVIDER``
+----------------------- ------------------------
+Open in New Page        ``False``
+----------------------- ------------------------
+Request user's username ``True``
+----------------------- ------------------------
+Scored                  ``True``
+----------------------- ------------------------
+Weight                  ``10``
 ======================= ========================
 
 .. [#f1] From their website, *"Flask is a microframework for Python based on
