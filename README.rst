@@ -1,8 +1,8 @@
 Sample LTI Provider for Flask
 =============================
-|Deploy|
 
 This is an edxtended version of https://github.com/mitodl/mit_lti_flask_sample repo
+
 Quick Start
 -----------
 
