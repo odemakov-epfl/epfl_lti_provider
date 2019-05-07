@@ -3,6 +3,11 @@ Sample LTI Provider for Flask
 
 This is an edxtended version of https://github.com/mitodl/mit_lti_flask_sample repo
 
+Super Quick Start
+-----------------
+.. |Deploy| image:: https://www.herokucdn.com/deploy/button.png
+   :target: https://heroku.com/deploy
+
 Quick Start
 -----------
 
