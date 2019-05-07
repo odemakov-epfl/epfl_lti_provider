@@ -5,6 +5,12 @@ This is an edxtended version of https://github.com/mitodl/mit_lti_flask_sample r
 
 Super Quick Start
 -----------------
+
+You can try out the sample app for free by deploying it to your Heroku account
+simply by clicking the deploy button:
+
+|Deploy|
+
 .. |Deploy| image:: https://www.herokucdn.com/deploy/button.png
    :target: https://heroku.com/deploy
 
